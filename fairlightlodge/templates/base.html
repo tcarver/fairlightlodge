@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fairlight Lodge Bed and Breakfast is a lovely Victorian home in Kings Lynn. Offering comfortable bedrooms, beautifully furnished with Freeview television, hospitality trays with home-made biscuits, and free WiFi access. En-suite and family rooms. Private parking. Within walking distance of town centre, bus and railway stations." />
+	<meta name="keywords" content="bed and breakfast, guest house, b&amp;b, kings lynn, 4 star, silver award, b and b, norfolk, sandringham" />
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="icon" type="image/png" href="{% static "imgs/faviconFL.png" %}">
+
+    <!-- Bootstrap -->
+    <link href="{% static "bootstrap-3.3.6-dist/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    {% block header_js %}{% endblock %}
+    {% block header_css %}{% endblock %}
+  </head>
+  <body>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="/">home <span class="sr-only">(current)</span></a></li>
+					<li><a href="/accommodation/">accommodation</a></li>
+					<li><a href="/tariff/">tariff</a></li>
+					<li><a href="/reviews/">reviews</a></li>
+					<li><a href="/gallery/">gallery</a></li>
+					<li><a href="/breakfast/">breakfast</a></li>
+					<li><a href="/location/">location</a></li>
+					<li><a href="/links/">links</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	{% block content %}{% endblock %}
+
+	<!-- FOOTER -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="container text-center">
+		<hr>
+			<div itemscope="" itemtype="http://schema.org/LocalBusiness"
+				id="contact">
+				<span itemscope itemtype="http://schema.org/LocalBusiness"
+					itemprop="name"> <span itemprop="name"><b>Fairlight
+							Lodge</b></span> | <span itemprop="address" itemscope
+					itemtype="http://schema.org/PostalAddress" itemprop="address"
+					itemscope="" itemtype="http://schema.org/PostalAddress"> <span
+						itemprop="streetAddress" itemprop="streetAddress">79
+							Goodwins Road</span> | <span itemprop="addressLocality"
+						itemprop="addressLocality">Kings Lynn</span> | <span
+						itemprop="addressRegion" itemprop="addressRegion">Norfolk</span> |
+						<span itemprop="postalCode" itemprop="postalCode">PE30 5PE</span>
+				</span> <br /> Tel: <span itemprop="telephone" itemprop="telephone">01553
+						762234</span> | Mobile: 07981 058370 | E-mail: <a
+					href="&#109;&#097;&#105;&#108;&#116;&#111;:enquiries&#064;fairlightlodge.co.uk"
+					itemprop="email">
+						<meta itemprop="email"
+							content="enquiries&#064;fairlightlodge.co.uk">enquiries&#064;fairlightlodge.co.uk
+				</a>
+				</span>
+			</div>
+		</div>
+		<!-- .site-info -->
+	</footer>
+	<!-- #colophon -->
+	<!-- /FOOTER -->
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static "bootstrap-3.3.6-dist/js/bootstrap.min.js" %}"></script>
+  </body>
+
+  
+</html>

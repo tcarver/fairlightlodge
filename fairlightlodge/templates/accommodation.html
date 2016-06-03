@@ -1,0 +1,40 @@
+{% extends "base.html" %} 
+{% block title %}Accomodation{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+			<ul>
+			<li>En-suite facilities in 6 rooms. the Family room has a private bathroom</li>
+			<li>Flat screen television with Freeview in all rooms</li>
+			<li>Tea and coffee making facilities and home made biscuits in the rooms</li>
+			<li>Children welcome</li>
+			<li>An iron and board are available</li>
+			<li>Special diets catered for on request</li>
+			<li>On site staff</li>
+			</ul>
+			</div>
+			<div class="col-md-6">
+			<ul>
+			<li>Free wireless internet access</li>
+			<li>Hair dryers in each room</li>
+			<li>Parking available (we have five parking spaces)</li>
+			<li>Bags and left luggage by arrangement on your day of departure</li>
+			<li>No pets allowed</li>
+			<li>Please see our terms and conditions</li>
+			<li>Daily housekeeping included in the room rate</li>
+			<li>Please see our <a href="http://www.fairlightlodge.co.uk/documents/access_2014.pdf" title="access details">Details of Access</a> and <a href="http://www.fairlightlodge.co.uk/documents/T&#038;C.pdf" title="Terms and Conditions">Terms and Conditions</a> </li>
+			</ul>
+			</div>
+		</div>
+
+{% load staticfiles %}
+		<div class="row">
+			<div class="col-md-12">
+			<img alt="" src="{% static "imgs/booking-com.jpg" %}">
+			<img alt="" src="{% static "imgs/tripadvisor_COE2016_en_UK.jpg" %}">
+			</div>
+		</div>
+	</div>
+{% endblock %}

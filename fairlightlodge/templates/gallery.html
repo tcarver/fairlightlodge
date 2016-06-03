@@ -1,0 +1,46 @@
+{% extends "base.html" %} 
+{% block title %}Fairlight Lodge Bed and Breakfast{% endblock %}
+{% load staticfiles %}
+
+{% block header_js %}
+	<script src="{% static "galleria/galleria-1.4.2.min.js" %}"></script>
+{% endblock %}
+
+{% block header_css %}
+	<style type="text/css">
+		.galleria { height:450px; }
+	</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+	<div class="galleria"></div>
+</div>
+
+<script>
+var data = [
+	{
+		image: '{% static "imgs/gallery/fairlightlodge_c.jpg" %}',
+		title: 'Fairlight Lodge Bed and Breakfast',
+	},
+    {
+        image: '{% static "imgs/gallery/breakfast.jpg" %}',
+        title: 'Breakfast room',
+    },
+    {
+        image: '{% static "imgs/gallery/breakfast2.jpg" %}',
+        title: 'Breakfast room',
+    },
+    {
+        image: '{% static "imgs/gallery/alastair_kitchen.jpg" %}',
+        title: 'Kitchen',
+    },
+];
+
+
+    Galleria.loadTheme("{% static 'galleria/themes/classic/galleria.classic.min.js' %}");
+    Galleria.run('.galleria', {dataSource: data,});
+</script>
+
+{% endblock %}
